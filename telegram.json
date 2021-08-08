@@ -1,0 +1,41 @@
+{
+  "app": {
+    "bot": {
+      "token": "",
+      "chat": "",
+      "replyTo": ""
+    },
+    "base": {
+      "lang": "",
+      "messenger": "",
+      "allureFolder": "",
+      "mattermostUrl": "",
+      "chart": false,
+      "chartName": "",
+      "project": ""
+    },
+    "mail": {
+      "host": "",
+      "port": "",
+      "username": "",
+      "password": "",
+      "enableSSL": false,
+      "from": "",
+      "recipient": ""
+    },
+    "proxy": {
+      "host": "",
+      "port": 0,
+      "username": "",
+      "password": ""
+    },
+    "skype": {
+      "appId": "",
+      "appSecret": "",
+      "serviceUrl": "",
+      "conversationId": "",
+      "botId": "",
+      "botName": ""
+    }
+  }
+}
