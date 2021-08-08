@@ -42,7 +42,7 @@ public class YoutravelTests extends TestBase {
             SelenideElement languageMenu = $(byText("Language"));
             actions().moveToElement(languageMenu).perform();
             $(byText("Russian (Русский)")).click();
-            $("body").shouldHave(Condition.text("АВТОРСКИЕ ТУРЫ — НОВЫЙ ФОРМАТ НАСЫЩЕННЫХ ПУТЕШЕСТВИЙ"));
+            $("body").shouldHave(Condition.text("АВТОРСКИЕ1 ТУРЫ — НОВЫЙ ФОРМАТ НАСЫЩЕННЫХ ПУТЕШЕСТВИЙ"));
         });
     }
 
