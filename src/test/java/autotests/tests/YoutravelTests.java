@@ -65,11 +65,4 @@ public class YoutravelTests extends TestBase {
             $("body").shouldHave(Condition.text("Arizona"));
         });
     }
-
-    
-
-
-
-
-
 }
