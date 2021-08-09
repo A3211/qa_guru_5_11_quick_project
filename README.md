@@ -79,6 +79,6 @@ allure serve build/allure-results
 
 ![alt "Allure TestOps"](./images/AllureTestOps.png "Allure TestOps")
 
-## Видео прохождения тестов, взятое из среды выполнения (из Selenoid)
+## Видео прохождения теста "3 Успешный поиск тура", взятое из среды выполнения (из Selenoid)
 
 ![alt "Video from Selenoid"](./images/selenoid.gif "Video from Selenoid")
