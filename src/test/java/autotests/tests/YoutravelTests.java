@@ -12,15 +12,6 @@ import static io.qameta.allure.Allure.step;
 
 public class YoutravelTests extends TestBase {
 
-    /*
-    https://youtravel.me/
-
-    + 1. Страница открылась появилась надпись
-    + 2. Сменили язык, проверили что надпись изменилась
-    3. Авторизация через гугл
-    + 4. Поиск тура куда, когда, найти
-     */
-
     @Test
     @DisplayName("Successful open youtravel.me")
     void openMainPageTest() {
@@ -56,7 +47,7 @@ public class YoutravelTests extends TestBase {
             $("body").shouldHave(Condition.text("GROUP TOURING AS PERSONAL AS NEVER BEFORE"));
         });
 
-        step("Choosing Altai", () -> {
+        step("Choosing Arizona", () -> {
             $(byText("Where")).scrollIntoView(true).click();
             $(byText("Arizona")).scrollIntoView(true).click();
         });
