@@ -10,27 +10,33 @@ ___
 | <img src="images/Jenkins.svg" width="40" height="40"> | <img src="images/Selenoid.svg" width="40" height="40"> | <img src="images/Allure Report.svg" width="40" height="40"> | <img src="images/Allure TestOps.svg" width="40" height="40"> | <img src="images/Telegram.svg" width="40" height="40"> |
 ___
 
-## Список тестов - хранение и анализ в Allure TestOps
+## Список тестов
 * 1 Успешный переход на страницу https://youtravel.me/
+  * Переходим на https://youtravel.me/
+  * Проверяем что есть надпись "GROUP TOURING AS PERSONAL AS NEVER BEFORE"  
 * 2 Успешное изменение языка на русский
-* 3 
+  * Переходим на https://youtravel.me/
+  * Проверяем что есть надпись "GROUP TOURING AS PERSONAL AS NEVER BEFORE"
+  * Кликаем на "Language"
+  * Кликаем на "Russian (Русский)"  
+  * Проверяем что есть надпись "АВТОРСКИЕ ТУРЫ — НОВЫЙ ФОРМАТ НАСЫЩЕННЫХ ПУТЕШЕСТВИЙ"  
+* 3 Успешный поиск тура
+  * Переходим на https://youtravel.me/
+  * Проверяем что есть надпись "GROUP TOURING AS PERSONAL AS NEVER BEFORE"
+  * Выбираем "Arizona"
+  * Выбираем дату
+  * Жмем на поиск
+  * Проверяем что страница с турами успешно открылась
 
-![alt "Allure TestOps"](./images/allureTO4.png "Allure TestOps")
+---
 
-## 4 из 5 тестов ПАДАЮТ на данный момент из-за ошибок на сайте
+## Как запускать тесты
 
-![alt "Allure TestOps"](./images/allureTO3.png "Allure TestOps")
+Запуск тестов происходит через джобу в Jenkins
+https://jenkins.autotests.cloud/job/C07-AlexeyKuslin-12_quick_tests/
 
-## Используемые параметры по умолчанию [для запуска через Jenkins](https://jenkins.autotests.cloud/job/c06-neoupokoev-childWorldTest/build?delay=0sec) <a href="https://www.jetbrains.com/idea/"><img src="./images/Jenkins.svg" width="30" height="30"  alt="Jenkins"/></a>
+![alt "бот в телеграмме"](./images/Jenkins.png "бот в телеграмме")
 
-* BROWSER (default chrome)
-* BROWSER_VERSION (default 89.0)
-* BROWSER_SIZE (default 1920x1080)
-* REMOTE_DRIVER_URL (url address from selenoid or grid)
-* THREADS (number of threads to run)
-* ALLURE_NOTIFICATIONS_VERSION
-
-![alt "Запуск через Jenkins"](./images/jenkinsRun.png)
 
 ### Run tests with filled local.properties:
 
@@ -50,15 +56,28 @@ gradle clean -DremoteDriverUrl=https://user1:1234@selenoid.autotests.cloud/wd/hu
 allure serve build/allure-results
 ```
 
-## Оповещение о результатах прохождения тестов через бот в телеграмме <a href="https://www.jetbrains.com/idea/"><img src="https://starchenkov.pro/qa-guru/img/skills/Telegram.svg" width="30" height="30"  alt="Telegram"/></a>
+---
 
-![alt "бот в телеграмме"](./images/bot2.png "бот в телеграмме")
+## Оповещение о результатах прохождения тестов происходит через бот в телеграм <a href="https://www.jetbrains.com/idea/"><img src="https://starchenkov.pro/qa-guru/img/skills/Telegram.svg" width="30" height="30"  alt="Telegram"/></a>
+
+После прохождения всех тестов приходит отчет в телегу
+
+![alt "бот в телеграмме"](./images/telegram.png "бот в телеграмме")
+
+---
+
+## Анализ результатов
+
+Более подробно с результатми тестов (шаги, скриншоты, видео прохождения теста, page source и browser console log) можно ознакомиться в:
+* Jenkins через Allure Reports 
+(перейти по ссылке в отчете телеграм)
+* и в Allure TestOps.
 
 ## Анализ результатов в Jenkins через Allure Reports
-![alt "Allure Reports"](./images/jenkinsResult.png "Allure Reports")
+![alt "Allure Reports"](./images/Allure.png "Allure Reports")
 ## Анализ результатов в Allure TestOps <a href="https://www.jetbrains.com/idea/"><img src="https://starchenkov.pro/qa-guru/img/skills/Allure_EE.svg" width="40" height="40"  alt="Allure EE"/></a>
 
-![alt "Allure TestOps"](./images/allureTO2.png "Allure TestOps")
+![alt "Allure TestOps"](./images/AllureTestOps.png "Allure TestOps")
 ## Видео прохождения тестов, взятое из среды выполнения (из Selenoid) <a href="https://www.jetbrains.com/idea/"><img src="https://starchenkov.pro/qa-guru/img/skills/Selenoid.svg" width="40" height="40"  alt="Selenoid"/></a>
 
-![alt "Video from Selenoid"](./images/Video.gif "Video from Selenoid")
+![alt "Video from Selenoid"](./images/Selenoid.gif "Video from Selenoid")
