@@ -78,6 +78,7 @@ allure serve build/allure-results
 ## Анализ результатов в Allure TestOps
 
 ![alt "Allure TestOps"](./images/AllureTestOps.png "Allure TestOps")
+
 ## Видео прохождения тестов, взятое из среды выполнения (из Selenoid)
 
 ![alt "Video from Selenoid"](./images/Selenoid.gif "Video from Selenoid")
