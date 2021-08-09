@@ -58,7 +58,7 @@ allure serve build/allure-results
 
 ---
 
-## Оповещение о результатах прохождения тестов происходит через бот в телеграм <a href="https://www.jetbrains.com/idea/"><img src="https://starchenkov.pro/qa-guru/img/skills/Telegram.svg" width="30" height="30"  alt="Telegram"/></a>
+## Оповещение о результатах прохождения тестов происходит через бот в телеграм
 
 После прохождения всех тестов приходит отчет в телегу
 
@@ -75,9 +75,9 @@ allure serve build/allure-results
 
 ## Анализ результатов в Jenkins через Allure Reports
 ![alt "Allure Reports"](./images/Allure.png "Allure Reports")
-## Анализ результатов в Allure TestOps <a href="https://www.jetbrains.com/idea/"><img src="https://starchenkov.pro/qa-guru/img/skills/Allure_EE.svg" width="40" height="40"  alt="Allure EE"/></a>
+## Анализ результатов в Allure TestOps
 
 ![alt "Allure TestOps"](./images/AllureTestOps.png "Allure TestOps")
-## Видео прохождения тестов, взятое из среды выполнения (из Selenoid) <a href="https://www.jetbrains.com/idea/"><img src="https://starchenkov.pro/qa-guru/img/skills/Selenoid.svg" width="40" height="40"  alt="Selenoid"/></a>
+## Видео прохождения тестов, взятое из среды выполнения (из Selenoid)
 
 ![alt "Video from Selenoid"](./images/Selenoid.gif "Video from Selenoid")
