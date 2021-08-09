@@ -81,4 +81,4 @@ allure serve build/allure-results
 
 ## Видео прохождения тестов, взятое из среды выполнения (из Selenoid)
 
-![alt "Video from Selenoid"](./images/Selenoid.gif "Video from Selenoid")
+![alt "Video from Selenoid"](./images/selenoid.gif "Video from Selenoid")
