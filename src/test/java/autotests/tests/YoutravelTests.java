@@ -65,4 +65,21 @@ public class YoutravelTests extends TestBase {
             $("body").shouldHave(Condition.text("Arizona"));
         });
     }
+
+    @Test
+    @DisplayName("Successful open youtravel.me")
+    void openToursPageTest() {
+        step("Open https://youtravel.me/", () -> {
+            open("https://youtravel.me/");
+            $("body").shouldHave(Condition.text("GROUP TOURING AS PERSONAL AS NEVER BEFORE"));
+        });
+
+        step("Open tours page", () -> {
+            $(".header").$(byText("Tours")).click();
+        });
+
+        step("Check open tours page", () -> {
+            $("body").shouldHave(Condition.text("My tours"));
+        });
+    }
 }
