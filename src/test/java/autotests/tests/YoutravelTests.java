@@ -67,7 +67,7 @@ public class YoutravelTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Successful open youtravel.me")
+    @DisplayName("Successful open https://youtravel.me/en/tours/")
     void openToursPageTest() {
         step("Open https://youtravel.me/", () -> {
             open("https://youtravel.me/");
@@ -80,6 +80,32 @@ public class YoutravelTests extends TestBase {
 
         step("Check open tours page", () -> {
             $("body").shouldHave(Condition.text("My tours"));
+        });
+    }
+
+    @Test
+    @DisplayName("Successful find tour with filter Travelers Age")
+    void findTourWithFilterTravelersAgeTest() {
+        step("Open https://youtravel.me/en/tours/", () -> {
+            open("https://youtravel.me/en/tours/");
+            $("body").shouldHave(Condition.text("My tours"));
+        });
+
+        step("Click OK on the help pop-up", () -> {
+            $(".interactive-hint__actions").$(byText("Ok")).click();
+        });
+
+        step("Click Travelers Age 18-39", () -> {
+            $(".filter-additional-wrapper").$(byText("Travelers Age")).click();
+            $(".filter-block-radio").$(byText("18-39")).click();
+        });
+
+        step("Click find option", () -> {
+            $(byText("Found 1 option. Show")).click();
+        });
+
+        step("Check Tour", () -> {
+            $("body").shouldHave(Condition.text("3 days in Portugal with locale. Photo. Car trip. Surfing."));
         });
     }
 }
